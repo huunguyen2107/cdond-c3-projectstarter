@@ -63,7 +63,7 @@ jobs:
             npm install
             npm run test
 
-scan-frontend:
+  scan-frontend:
     docker:
       - image: circleci/node:13.8.0
     steps:
@@ -76,7 +76,7 @@ scan-frontend:
             cd frontend
             npm install
             npm audit --audit-level=critical
-            
+
   scan-backend:
     docker:
       - image: circleci/node:13.8.0
