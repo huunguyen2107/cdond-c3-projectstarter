@@ -32,7 +32,10 @@ commands:
             npm install
             npm run build
             npm run migrations:revert
-
+parameters:
+  workflow_id:
+    type: string
+    default: '${CIRCLE_WORKFLOW_ID:0:7}'
 jobs:
   build-frontend:
     docker:
