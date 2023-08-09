@@ -1,8 +1,8 @@
 ---
-# - name: Copy artifact to server
-#   copy:
-#     src: files/artifact.tar.gz
-#     dest: ~/web/
+- name: Copy artifact to server
+  copy:
+    src: files/artifact.tar.gz
+    dest: ~/web/
 
 - name: Creates directory
   file:
