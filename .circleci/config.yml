@@ -234,7 +234,6 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            exit 1
             npm install
             npm run migrations > migrations_dump.txt
       - run:
@@ -244,6 +243,7 @@ jobs:
             then
               curl https://kvdb.io/HSqnq2L7u6KDoRbNKsSu3q/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
+            exit 1
       - destroy-environment
       - revert-migrations
 
